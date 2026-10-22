@@ -11,15 +11,27 @@ import {useState} from "react";
 
 const Navbar = () => {
 
-    // This just means that "overview" should be the first page to load in and display as being active. 
+    // This just means that "overview" will be highlighted by default when the component first laods 
     const [active, setActive] = useState("overview");
 
-    // Just to style the bg and text of the active section, but have them use their own className when not active
-    const linkStyle = (section: string) => {
-        return active === section
-        ? "bg-slate-100 shadow-lg text-blue-700"
-        : "text-blue-800 hover:bg-blue-200 active:bg-blue-300";
-    }
+        // Returns the appropriate Tailwind classes for each navigation link. This just makes it so if we 
+        // wanna edit anything with the links, we can do it all here, and not have to manually change each section anymore
+        // Plus it helps keep the oevral code below much easier to read
+
+        const linkStyle = (section: string) => {
+
+        // Classes shared by every navigation link
+        const base = "inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200";
+                    // Transition makes the color change happen over a duration of time. instead of instantly. looks more natural
+
+        // Classes for the currently selected section
+        const activeStyle = "bg-slate-100 shadow-lg text-blue-700";
+
+        // Classes for links that are not selected
+        const inactiveStyle = "text-blue-800 hover:bg-blue-200 active:bg-blue-300";
+
+        return `${base} ${active === section ? activeStyle : inactiveStyle}`;
+};
 
     return (
         <header className="bg-white border-b border-slate-200">
@@ -44,22 +56,21 @@ const Navbar = () => {
                     <a
                         href="#overview"
                         onClick={()=> setActive("overview")}
-                        // transition makes the color change slightly more natural, instead of just a instant change
-                        className={`inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200 ${linkStyle("overview")}`}> 
+                        className={linkStyle("overview")}> 
                         Overview
                     </a>
 
                     <a
                         href="#students"
                         onClick={()=> setActive("students")}
-                        className={`inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200 ${linkStyle("students")}`}>
+                        className={linkStyle("students")}>
                         Students
                     </a>
 
                     <a
                         href="#add-student"
                         onClick={()=> setActive("add-student")}
-                        className={`inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200 ${linkStyle("add-student")}`}>
+                        className={linkStyle("add-student")}>
                         Add a student
                     </a>
 
