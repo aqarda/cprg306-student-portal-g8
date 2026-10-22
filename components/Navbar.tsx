@@ -11,12 +11,14 @@ import {useState} from "react";
 
 const Navbar = () => {
 
+    // This just means that "overview" should be the first page to load in and display as being active. 
     const [active, setActive] = useState("overview");
 
+    // Just to style the bg and text of the active section, but have them use their own className when not active
     const linkStyle = (section: string) => {
         return active === section
-        ? "bg-white shadow-sm text-blue-700"
-        : "text-blue-800 hover:bg-blue-100";
+        ? "bg-slate-100 shadow-lg text-blue-700"
+        : "text-blue-800 hover:bg-blue-200 active:bg-blue-300";
     }
 
     return (
@@ -43,21 +45,21 @@ const Navbar = () => {
                         href="#overview"
                         onClick={()=> setActive("overview")}
                         // transition makes the color change slightly more natural, instead of just a instant change
-                        className={`inline-block px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${linkStyle("overview")}`}> 
+                        className={`inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200 ${linkStyle("overview")}`}> 
                         Overview
                     </a>
 
                     <a
                         href="#students"
                         onClick={()=> setActive("students")}
-                        className={`inline-block px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${linkStyle("students")}`}>
+                        className={`inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200 ${linkStyle("students")}`}>
                         Students
                     </a>
 
                     <a
                         href="#add-student"
                         onClick={()=> setActive("add-student")}
-                        className={`inline-block px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${linkStyle("add-student")}`}>
+                        className={`inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200 ${linkStyle("add-student")}`}>
                         Add a student
                     </a>
 
