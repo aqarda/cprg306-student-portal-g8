@@ -1,13 +1,19 @@
-"use client";
-
-import {useState} from "react";
 /*
+ * File: Navbar.tsx
+ * Author: Patrick Bouley
+ * Date: October 22, 2026
+ * 
+ * 
  * This component displays the school header and navigation bar.
  * It does not require props because the content is predefined.
  * The header displays the school name and Student Portal badge.
  * The navigation bar links to three sections on the same page.
  * Tailwind CSS handles the styling and responsive layout.
  */
+
+"use client";
+
+import {useState} from "react";
 
 const Navbar = () => {
 
