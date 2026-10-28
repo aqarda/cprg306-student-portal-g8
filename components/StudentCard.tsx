@@ -1,5 +1,9 @@
 /*
-* This component draws one student's card: their full name, their grade, and two buttons.
+ * File: components/StudentCard.tsx
+ * Author: John Leandro Loyao (Member B)
+ * Date: October 26, 2026
+ *
+ * This component draws one student's card: their full name, their grade, and two buttons.
  * Its inputs are two props: student (one Student object) and onRemove (a function from
  * StudentPortal that removes a student by id). Each card keeps its own showDetails state,
  * so Show details opens only this card, and the button label and Honour roll badge are

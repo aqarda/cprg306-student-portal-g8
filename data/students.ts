@@ -1,4 +1,8 @@
 /*
+ * File: data/students.ts
+ * Author: John Leandro Loyao (Member B)
+ * Date: October 26, 2026
+ *
  * This file holds the starting data for the New Generation High School student portal.
  * It exports the Student interface, which describes the five fields every student has,
  * and the initialStudents array, which holds the ten students the portal starts with.
@@ -15,6 +19,7 @@ export interface Student {
     grade: number;       // 9 to 12
     average: number;     // a mark out of 100 (80 or more = honour roll)
 }
+// Totals for testing: 10 students, 4 on the honour roll, 3 in grade 12.
 // Every last name is different, so searching a last name finds exactly one student.
 export const initialStudents: Student[] = [
     // Grade 12
