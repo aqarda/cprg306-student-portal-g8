@@ -24,8 +24,8 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
     // input states
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [grade, setGrade] = useState(9);
-    const [average, setAverage] = useState(70);
+    const [grade, setGrade] = useState("9");
+    const [average, setAverage] = useState("70");
 
     // adding student function
     const handleAdd = () => {
@@ -33,22 +33,31 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
             return;
         }
 
-        if (grade < 9 || grade > 12 || average < 0 || average > 100) {
+        if (
+            grade.trim() === "" ||
+            average.trim() === "" ||
+            !Number.isInteger(Number(grade)) ||
+            Number(grade) < 9 ||
+            Number(grade) > 12 ||
+            !Number.isFinite(Number(average)) ||
+            Number(average) < 0 ||
+            Number(average) > 100
+        ) {
             return;
         }
 
         onAdd({
             firstName: firstName.trim(),
             lastName: lastName.trim(),
-            grade,
-            average,
+            grade: Number(grade),
+            average: Number(average),
         });
 
         // resets the inputs when added
         setFirstName("");
         setLastName("");
-        setGrade(9);
-        setAverage(70);
+        setGrade("9");
+        setAverage("70");
     };
 
     return (
@@ -96,7 +105,7 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
                         min={9}
                         max={12}
                         value={grade}
-                        onChange={(e) => setGrade(Number(e.target.value))}
+                        onChange={(e) => setGrade(e.target.value)}
                         className="w-full rounded-lg border border-slate-300 p-3 text-slate-900"
                     />
                 </div>
@@ -111,7 +120,7 @@ const AddStudent = ({ onAdd }: AddStudentProps) => {
                         min={0}
                         max={100}
                         value={average}
-                        onChange={(e) => setAverage(Number(e.target.value))}
+                        onChange={(e) => setAverage(e.target.value)}
                         className="w-full rounded-lg border border-slate-300 p-3 text-slate-900"
                     />
                 </div>
