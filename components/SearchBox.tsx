@@ -1,11 +1,9 @@
-
 "use client";
 
 /*
  * File: SearchBox.tsx
  * Author: Fernando Lopez-Areal Serrano
- * Date: October 27, 2026
- *
+ * Date: October 24, 2026
  * This component displays a search box for finding students.
  * It receives the current search text and a function through props.
  * When the user types, the component sends the new text to StudentPortal.
