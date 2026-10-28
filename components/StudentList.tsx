@@ -1,5 +1,9 @@
 /*
-* This component draws one StudentCard for every student it is given.
+ * File: components/StudentList.tsx
+ * Author: John Leandro Loyao (Member B)
+ * Date: October 26, 2026
+ *
+ * This component draws one StudentCard for every student it is given.
  * Its inputs are two props: students (the array to show, already filtered by the search)
  * and onRemove (the function from StudentPortal that removes a student by id).
  * It works out whether the array is empty, uses .map() with each student's id as the key,
