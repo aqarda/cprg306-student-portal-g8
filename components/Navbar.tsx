@@ -11,33 +11,13 @@
  * Tailwind CSS handles the styling and responsive layout.
  */
 
-"use client";
-
-import {useState} from "react";
-
 const Navbar = () => {
 
-    // This just means that "overview" will be highlighted by default when the component first laods 
-    const [active, setActive] = useState("overview");
-
-        // Returns the appropriate Tailwind classes for each navigation link. This just makes it so if we 
-        // wanna edit anything with the links, we can do it all here, and not have to manually change each section anymore
-        // Plus it helps keep the oevral code below much easier to read
-
-        const linkStyle = (section: string) => {
-
-        // Classes shared by every navigation link
-        const base = "inline-block px-4 py-2 rounded-lg font-bold transition-colors duration-200";
-                    // Transition makes the color change happen over a duration of time. instead of instantly. looks more natural
-
-        // Classes for the currently selected section
-        const activeStyle = "bg-slate-100 shadow-lg text-blue-700";
-
-        // Classes for links that are not selected
-        const inactiveStyle = "text-blue-800 hover:bg-blue-200 active:bg-blue-300";
-
-        return `${base} ${active === section ? activeStyle : inactiveStyle}`;
-};
+    // Shared styling for navigation links, because they all basically just do the same thing
+    const linkStyle =
+        "inline-block px-6 py-2 rounded-lg font-bold text-blue-800" +
+        "hover:bg-blue-200 active:bg-blue-300 " +
+        "transition-colors duration-200";
 
     return (
         <header className="bg-white border-b border-slate-200">
@@ -57,26 +37,23 @@ const Navbar = () => {
 
             {/* Navigation links */}
             <nav className="bg-blue-100 border-t border-slate-200">
-                <div className="max-w-5xl mx-auto px-6 py-3 flex flex-wrap items-center gap-6">
+                <div className="max-w-5xl mx-auto py-2 flex flex-wrap items-center gap-2">
 
                     <a
                         href="#overview"
-                        onClick={()=> setActive("overview")}
-                        className={linkStyle("overview")}> 
+                        className={linkStyle}> 
                         Overview
                     </a>
 
                     <a
                         href="#students"
-                        onClick={()=> setActive("students")}
-                        className={linkStyle("students")}>
+                        className={linkStyle}>
                         Students
                     </a>
 
                     <a
                         href="#add-student"
-                        onClick={()=> setActive("add-student")}
-                        className={linkStyle("add-student")}>
+                        className={linkStyle}>
                         Add a student
                     </a>
 

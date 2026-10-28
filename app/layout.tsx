@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     description: "Student Portal",
 };
 
-// children acts as a placeholer components, but should handle any components that come from the main page, 
+// children acts as a placeholer component, but should handle any components that come from the main page, 
 // and just display that info between the Navbar and Footer components 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <html lang="en">
+        <html lang="en" className="scroll-smooth">
             <body className="bg-slate-100 min-h-screen flex flex-col">
                 <Navbar />
 
