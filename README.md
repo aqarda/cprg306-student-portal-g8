@@ -53,7 +53,7 @@ GitHub Repository:
 https://github.com/aqarda/cprg306-student-portal-g8
 
 Deployed Website:
-cprg306-student-portal-g8.vercel.app
+https://cprg306-student-portal-g8.vercel.app/
 
 Features
 
