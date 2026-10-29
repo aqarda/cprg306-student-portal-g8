@@ -26,36 +26,33 @@ npm run dev
 
 Open http://localhost:3000 in your browser to view the application.
 
-New Generation High School — Student Portal
+# New Generation High School — Student Portal
 
-Project Overview
+# Project Overview
 
 This project is a student management portal created for New Generation High School, Our Second Group Assignment
 The application allows school administrators to view student information, search for students by name, add and remove students, and view school statistics.
 The project is built as a single-page application using Next.js, React, TypeScript, and Tailwind CSS.
 
-Group Members and Responsibilities:
+# Group Members and Responsibilities:
 
 Member A Tasks: Patrick Bouley
-
-Responsibilities: Navbar, Footer, StatsPanel, app/layout.tsx, overall styling
+- Responsibilities: Navbar, Footer, StatsPanel, app/layout.tsx, overall styling
 
 Member B Tasks: John Leandro Loyao
-
-Responsibilities: Student interface, student data, StudentList, StudentCard
+- Responsibilities: Student interface, student data, StudentList, StudentCard
 
 Member C Tasks: Fernando Lopez-Areal Serrano
+- Responsibilities: StudentPortal, SearchBox, AddStudent, student state and functionality
 
-Responsibilities: StudentPortal, SearchBox, AddStudent, student state and functionality
-
-LINKS:
+# LINKS:
 GitHub Repository:
 https://github.com/aqarda/cprg306-student-portal-g8
 
 Deployed Website:
 https://cprg306-student-portal-g8.vercel.app/
 
-Features
+# Features
 
 - Responsive navigation bar with links to each section
 - School overview with live student statistics
@@ -66,7 +63,7 @@ Features
 - Clear the entire student list
 - Responsive layouts for desktop and mobile devices
 
-Testing Checklist
+# Testing Checklist
 
 Test 1: Open the application.
 
