@@ -35,13 +35,17 @@ The application allows school administrators to view student information, search
 The project is built as a single-page application using Next.js, React, TypeScript, and Tailwind CSS.
 
 Group Members and Responsibilities:
+
 Member A Tasks: Patrick Bouley
+
 Responsibilities: Navbar, Footer, StatsPanel, app/layout.tsx, overall styling
 
 Member B Tasks: John Leandro Loyao
+
 Responsibilities: Student interface, student data, StudentList, StudentCard
 
 Member C Tasks: Fernando Lopez-Areal Serrano
+
 Responsibilities: StudentPortal, SearchBox, AddStudent, student state and functionality
 
 LINKS:
