@@ -15,7 +15,7 @@ const Navbar = () => {
 
     // Shared styling for navigation links, because they all basically just do the same thing
     const linkStyle =
-        "inline-block px-6 py-2 rounded-lg font-bold text-blue-800" +
+        "inline-block px-6 py-2 rounded-lg font-bold text-blue-800 " +
         "hover:bg-blue-200 active:bg-blue-300 " +
         "transition-colors duration-200";
 
